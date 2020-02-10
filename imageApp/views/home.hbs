@@ -1,0 +1,20 @@
+{{> navigation}}
+
+{{#if title}}
+    <h5>{{title}}</h5>
+{{/if}}
+
+<p>
+ {{#each list as |l|}}
+    {{l.name}} -> {{l.age}} <br>
+ {{/each}}
+</p>
+
+<form action="/upload" method="POST" enctype="multipart/form-data">
+ <input type="file" name="image">
+ <button>
+ Guardar en servidor
+ </button>
+</form>
+
+{{> footer}}
